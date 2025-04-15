@@ -64,7 +64,7 @@ eksctl version
 eksctl create cluster --name=muhannad-eks25 \
                       --region=ap-south-1 \
                       --zones=ap-south-1a,ap-south-1b \
-                      --version=1.31 \
+                      --version=1.32 \
                       --without-nodegroup
 
 eksctl utils associate-iam-oidc-provider \
