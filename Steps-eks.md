@@ -61,18 +61,18 @@ eksctl version
 ## Create EKS CLUSTER
 
 ```bash
-eksctl create cluster --name=my-eks22 \
+eksctl create cluster --name=muhannad-eks25 \
                       --region=ap-south-1 \
                       --zones=ap-south-1a,ap-south-1b \
-                      --version=1.30 \
+                      --version=1.32 \
                       --without-nodegroup
 
 eksctl utils associate-iam-oidc-provider \
     --region ap-south-1 \
-    --cluster my-eks22 \
+    --cluster muhannad-eks25 \
     --approve
 
-eksctl create nodegroup --cluster=my-eks22 \
+eksctl create nodegroup --cluster=muhannad-eks25 \
                        --region=ap-south-1 \
                        --name=node2 \
                        --node-type=t3.medium \
@@ -81,7 +81,7 @@ eksctl create nodegroup --cluster=my-eks22 \
                        --nodes-max=4 \
                        --node-volume-size=20 \
                        --ssh-access \
-                       --ssh-public-key=Key \
+                       --ssh-public-key=testhp \
                        --managed \
                        --asg-access \
                        --external-dns-access \
